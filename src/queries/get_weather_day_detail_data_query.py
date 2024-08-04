@@ -7,5 +7,5 @@ class GetWeatherDayDetailDataQuery:
     def query_weather_day_detail_data():
         day_detail_data = f''' 
                         select * 
-                        from weather_day_detail;'''
+                        from ars_day_temperature;'''
         return day_detail_data

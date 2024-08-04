@@ -10,9 +10,9 @@ class UpdateReceivedDataStatusHandler:
     def __init__(self, income_data, status, calculation_id):
         data = {
             "calculation_id": calculation_id,
-            "status": status,
+            "run_status": status,
             "income_input": str(income_data),
-            "load_time": datetime.datetime.now()
+            "action_datetime": datetime.datetime.now()
         }
 
         self.status_data_df = pd.DataFrame(data=data, index=[0])
@@ -22,7 +22,7 @@ class UpdateReceivedDataStatusHandler:
         logging.info(f"Logging status data.")
         engine = DbConnectorModel().create_upload_db_connection()
 
-        self.status_data_df.to_sql(name="servis_income_status_table",
+        self.status_data_df.to_sql(name="sup_run_status",
                                    con=engine,
                                    if_exists='append',
                                    index=False)

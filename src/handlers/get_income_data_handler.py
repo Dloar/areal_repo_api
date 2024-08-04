@@ -7,6 +7,7 @@ class GetIncomeDataHandler:
         self.daily_income_df = GetAttractionDailyDataHandler().load_attraction_daily_data()
         self.calendar_detail_df = GetWeatherDayDetailDataHandler().load_weather_day_detail_data()
         self.processing_date = income_data['action_date']
+
     def structure_income_data(self):
         pass
 

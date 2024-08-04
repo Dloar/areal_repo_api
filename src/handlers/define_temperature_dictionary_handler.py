@@ -11,7 +11,7 @@ class DefineTemperatureDictionaryHandler:
 
     def get_weather_data(self):
         data = {
-            "action_date": self.current_action_date(),
+            "action_datetime": self.current_action_date(),
             "temperature": self.temperature_handler(),
             "humidity": self.humidity_handler(),
             "wind_speed": self.wind_speed_handler(),
@@ -25,7 +25,7 @@ class DefineTemperatureDictionaryHandler:
         "get current datetime for to ingest"
         try:
             if 'action_date' in list(self.temperature_data.keys()):
-                action_datetime = self.temperature_data['action_date']
+                action_datetime = self.temperature_data['action_datetime']
             else:
                 action_datetime = str(datetime.datetime.now())
         except Exception as e:

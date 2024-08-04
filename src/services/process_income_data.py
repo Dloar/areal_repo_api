@@ -1,7 +1,7 @@
 import uuid
 
-from areal_repo_api.src.handlers.get_income_data_handler import GetIncomeDataHandler
-from areal_repo_api.src.queries.data_update.update_received_data_status_handler import UpdateReceivedDataStatusHandler
+from src.handlers.get_income_data_handler import GetIncomeDataHandler
+from src.queries.data_update.update_received_data_status_handler import UpdateReceivedDataStatusHandler
 
 
 def process_income_data(income_data):
